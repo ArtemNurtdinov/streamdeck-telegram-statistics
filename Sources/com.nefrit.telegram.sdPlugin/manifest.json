@@ -1,7 +1,7 @@
 {
   "Actions": [
     {
-      "Icon": "assets/actionVideoViewsIcon",
+      "Icon": "assets/actionSubscribersIcon",
       "Name": "Channel subscribers",
       "States": [
         {
@@ -18,12 +18,12 @@
   "Author": "ArtemNeFRiT",
   "CodePath": "code.html", 
   "Description": "With this plugin you can easily track the subscribers of Telegram chanel.",
-  "Name": "Telegram Subscribers Tracker",
+  "Name": "Telegram Stats Tracker",
   "Icon": "assets/pluginIcon",
   "Version": "1.0.0",
   "PropertyInspectorPath": "index_pi.html",
   "URL": "https://github.com/ArtemNeFRiT/elgato-youtube-statistics",
-  "Category": "Telegram Subscribers Tracker",
+  "Category": "Telegram Stats Tracker",
   "CategoryIcon": "assets/categoryIcon",
   "OS": [
     {
