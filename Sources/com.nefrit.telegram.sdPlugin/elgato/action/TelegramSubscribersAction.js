@@ -7,10 +7,9 @@ class TelegramSubscribersAction {
     static ACTION_EVENT_DID_RECEIVE_SETTINGS = "didReceiveSettings"
     static ACTION_UUID = "com.nefrit.telegram.subscribers"
 
-    constructor(titleUpdater, urlOpener, telegram) {
+    constructor(titleUpdater, urlOpener) {
         this.titleUpdater = titleUpdater;
         this.urlOpener = urlOpener
-        this.telegram = telegram;
         this.timers = new Map()
     }
 
@@ -18,6 +17,10 @@ class TelegramSubscribersAction {
     }
 
     async onKeyUp(context, settings, coordinates, userDesiredState) {
+        let tgChannel = this.getTelegramChannel(settings)
+        if (!tgChannel) return;
+        const url = "https://t.me/" + tgChannel
+        this.urlOpener.open(url)
     }
 
     async onWillAppear(context, settings, coordinates) {
@@ -36,9 +39,9 @@ class TelegramSubscribersAction {
 
     async updateViews(context, settings) {
         const tgBotToken = this.getTelegramBotToken(settings)
-        const channelName = this.getTelegramChannelName(settings)
-        if (!tgBotToken || !channelName) return
-        const apiUrl = "https://api.telegram.org/bot" + tgBotToken + "/getChatMembersCount?chat_id=@" + channelName
+        const tgChannel = this.getTelegramChannel(settings)
+        if (!tgBotToken || !tgChannel) return
+        const apiUrl = "https://api.telegram.org/bot" + tgBotToken + "/getChatMembersCount?chat_id=@" + tgChannel
         console.log(apiUrl, settings)
         const response = await fetch(apiUrl)
         const data = await response.json()
@@ -84,7 +87,7 @@ class TelegramSubscribersAction {
         return apiKey
     }
 
-    getTelegramChannelName(settings) {
+    getTelegramChannel(settings) {
         let apiKey = "";
         if (settings.hasOwnProperty('telegramChannelName')) {
             apiKey = settings["telegramChannelName"];
