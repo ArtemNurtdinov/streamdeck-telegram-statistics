@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>com.nefrit.telegram.statistics</title>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+<script>
+    function connectElgatoStreamDeckSocket(inPort, inPluginUUID, inRegisterEvent, inInfo) {
+        new Elgato("ws://127.0.0.1:", inPort, inPluginUUID, inRegisterEvent)
+    }
+</script>
+
+<script src="elgato/Elgato.js"></script>
+<script src="elgato/action/TelegramSubscribersAction.js"></script>
+<script src="elgato/event/TitleUpdater.js"></script>
+<script src="elgato/event/ImageUpdater.js"></script>
+<script src="elgato/event/URLOpener.js"></script>
+<script src="telegram/Telegram.js"></script>
+
+</body>
+
+</html>

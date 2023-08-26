@@ -1,0 +1,42 @@
+{
+  "Actions": [
+    {
+      "Icon": "assets/actionVideoViewsIcon",
+      "Name": "Channel subscribers",
+      "States": [
+        {
+          "Image": "assets/actionIcon",
+          "TitleAlignment": "middle",
+          "FontSize": "14"
+        }
+      ], 
+      "SupportedInMultiActions": false,
+      "UUID": "com.nefrit.telegram.subscribers"
+    }
+  ], 
+  "SDKVersion": 2,
+  "Author": "ArtemNeFRiT",
+  "CodePath": "code.html", 
+  "Description": "With this plugin you can easily track the subscribers of Telegram chanel.",
+  "Name": "Telegram Subscribers Tracker",
+  "Icon": "assets/pluginIcon",
+  "Version": "1.0.0",
+  "PropertyInspectorPath": "index_pi.html",
+  "URL": "https://github.com/ArtemNeFRiT/elgato-youtube-statistics",
+  "Category": "Telegram Subscribers Tracker",
+  "CategoryIcon": "assets/categoryIcon",
+  "OS": [
+    {
+        "Platform": "mac", 
+        "MinimumVersion" : "10.11"
+    },
+    {
+        "Platform": "windows", 
+        "MinimumVersion" : "10"
+    }
+  ],
+  "Software": 
+    {
+        "MinimumVersion" : "4.1"
+    }
+}
