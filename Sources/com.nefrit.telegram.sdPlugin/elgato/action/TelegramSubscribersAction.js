@@ -88,11 +88,18 @@ class TelegramSubscribersAction {
     }
 
     getTelegramChannel(settings) {
-        let apiKey = "";
+        let telegramChannel = "";
         if (settings.hasOwnProperty('telegramChannelName')) {
-            apiKey = settings["telegramChannelName"];
+            telegramChannel = settings["telegramChannelName"];
         }
-        return apiKey
+        return this.getTelegramChannelId(telegramChannel)
+    }
+
+    getTelegramChannelId(url) {
+        if (url.includes("t.me")) {
+            return url.split('/').pop();
+        }
+        return url
     }
 
     formatNumber(numberString) {
