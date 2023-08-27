@@ -20,6 +20,11 @@ function saveClicked() {
 function initPropertyInspector() {
 }
 
+function openDocumentationClicked() {
+    const url = 'https://github.com/ArtemNeFRiT/streamdeck-telegram-statistics#Configuration'
+    $PI.openUrl(url)
+}
+
 function sendValueToPlugin(value, param) {
     $PI.sendToPlugin({[param]: value});
 }
