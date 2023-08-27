@@ -1,15 +1,15 @@
-`Telegram Stats Tracker` will help you track the statistics on Telegram.
+The `Telegram Stats Tracker` is designed to help you track statistics on Telegram.
 
 ![](Sources/com.nefrit.telegram.sdPlugin/previews/1-preview.png)
 
 # Description
 
-With this plugin you can easily track the statistic of your favorite Telegram channel.
+With this plugin, you can easily track the statistics of your favorite Telegram channel.
 
 - Track Telegram channel statistics:
-  - Members count
-- Refreshes every 5 minutes
-- Pressing the button will open the corresponding channel
+  - Member count
+- The data automatically refreshes every 5 minutes
+- Clicking the button will open the corresponding channel
 - Cross-platform (macOS, Windows)
 
 ![](screenshot3.png)
